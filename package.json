@@ -1,0 +1,11 @@
+{
+  "name": "html",
+  "version": "1.0.0",
+  "description": "Fundamentos HTML",
+  "keywords": [
+    "html",
+    "web development"
+  ],
+  "author": "Alex Muñoz <https://github.com/alexmf91>",
+  "license": "MIT"
+}
