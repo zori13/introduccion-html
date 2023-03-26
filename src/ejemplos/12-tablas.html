@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ejemplos de tablas en HTML</title>
+  </head>
+  <body>
+    <h1>Ejemplos de tablas en HTML</h1>
+
+    <h2>Creando una tabla básica</h2>
+    <table>
+      <tr>
+        <th>Nombre</th>
+        <th>Edad</th>
+        <th>Ciudad</th>
+      </tr>
+      <tr>
+        <td>John Doe</td>
+        <td>35</td>
+        <td>Chicago</td>
+      </tr>
+      <tr>
+        <td>Jane Smith</td>
+        <td>28</td>
+        <td>New York</td>
+      </tr>
+    </table>
+
+    <h2>Añadiendo bordes y ajustando el ancho de las celdas</h2>
+    <table border="1">
+      <tr>
+        <th width="100">Nombre</th>
+        <th width="50">Edad</th>
+        <th>Ciudad</th>
+      </tr>
+      <tr>
+        <td>John Doe</td>
+        <td>35</td>
+        <td>Chicago</td>
+      </tr>
+      <tr>
+        <td>Jane Smith</td>
+        <td>28</td>
+        <td>New York</td>
+      </tr>
+    </table>
+
+    <h2>Combinando celdas</h2>
+    <table border="1">
+      <tr>
+        <th>Nombre</th>
+        <th>Información</th>
+      </tr>
+      <tr>
+        <td>John Doe</td>
+        <td rowspan="2">Información adicional sobre John Doe</td>
+      </tr>
+      <tr>
+        <td>Jane Smith</td>
+      </tr>
+    </table>
+
+    <h2>Añadiendo encabezados y pies de página a una tabla</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Edad</th>
+          <th>Ciudad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>John Doe</td>
+          <td>35</td>
+          <td>Chicago</td>
+        </tr>
+        <tr>
+          <td>Jane Smith</td>
+          <td>28</td>
+          <td>New York</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">Total de personas: 2</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

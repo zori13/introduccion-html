@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Formulario con Validación</title>
+  </head>
+  <body>
+    <form method="post" onsubmit="return validarFormulario()">
+      <h2>Registro de usuario</h2>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" minlength="3" maxlength="20" /><br /><br />
+
+      <label for="edad">Edad:</label>
+      <input type="number" id="edad" name="edad" min="18" max="99" required /><br /><br />
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required /><br /><br />
+
+      <label for="password">Contraseña:</label>
+      <input type="password" id="password" name="password" minlength="8" maxlength="20" required /><br /><br />
+
+      <label for="confirm-password">Confirmar contraseña:</label>
+      <input
+        type="password"
+        id="confirm-password"
+        name="confirm-password"
+        minlength="8"
+        maxlength="20"
+        required
+      /><br /><br />
+
+      <input type="submit" value="Enviar" />
+    </form>
+
+    <script>
+      function validarFormulario() {
+        const nombre = document.getElementById('nombre')
+        const edad = document.getElementById('edad')
+        const email = document.getElementById('email')
+        const password = document.getElementById('password')
+        const confirmPassword = document.getElementById('confirm-password')
+
+        if (nombre.value.length < nombre.minLength) {
+          alert('El nombre debe tener al menos ' + nombre.minLength + ' caracteres.')
+          return false
+        }
+
+        if (nombre.value.length > nombre.maxLength) {
+          alert('El nombre no puede tener más de ' + nombre.maxLength + ' caracteres.')
+          return false
+        }
+
+        if (edad.value < 18 || edad.value > 99) {
+          alert('Por favor, introduce una edad válida (debe ser mayor de 18 y menor de 99)')
+          return false
+        }
+
+        if (!email.checkValidity()) {
+          alert('El correo electrónico no es válido.')
+          return false
+        }
+
+        if (password.value.length < password.minLength) {
+          alert('La contraseña debe tener al menos ' + password.minLength + ' caracteres.')
+          return false
+        }
+
+        if (password.value.length > password.maxLength) {
+          alert('La contraseña no puede tener más de ' + password.maxLength + ' caracteres.')
+          return false
+        }
+
+        if (password.value !== confirmPassword.value) {
+          alert('Las contraseñas no coinciden')
+          return false
+        }
+
+        return true
+      }
+    </script>
+  </body>
+</html>
